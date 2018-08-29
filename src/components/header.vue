@@ -1,14 +1,7 @@
 <template>
-    <header class="header">
-        <div>
-            {{logo}}
-        </div>
-        <ul class="nav">
-            <li v-for="nav in navs">
-                {{nva}}
-            </li>
-        </ul>
-    </header>
+    <div class="header">
+
+    </div>
 </template>
 
 <script>
@@ -23,5 +16,11 @@ export default {
 </script>
 
 <style>
+.header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+}
 </style>
-

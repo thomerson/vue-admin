@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "foorer",
+  name: "cfooter",
   data() {
     return {
       lis: [

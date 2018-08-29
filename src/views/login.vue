@@ -1,7 +1,7 @@
 <template>
   <div>
     <clogin></clogin>
-    <cfooter></cfooter>
+    <!-- <cfooter></cfooter> -->
   </div>
 </template>
 

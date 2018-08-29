@@ -2,6 +2,7 @@
 // import Router from 'vue-router'
 import Login from '@/views/login'
 import Register from '@/views/register'
+import Dashboard from '@/views/dashboard'
 
 // Vue.use(Router)
 const routes = [
@@ -18,6 +19,12 @@ const routes = [
   {
     path: '/',
     redirect: '/Login'
-  }]
+  },
+  {
+    path: '/Index',
+    name: 'Dashboard',
+    component: Dashboard
+  }
+]
 
 export default routes

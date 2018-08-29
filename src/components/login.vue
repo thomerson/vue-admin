@@ -2,11 +2,14 @@
   <div class="login-container">
     <el-form :model="user" :rules="rules" ref="userForm" class="login-form">
       <el-form-item prop="name">
-        <el-input v-model="user.name"></el-input>
+        <el-input v-model="user.name">
+          <i slot="prefix" class="iconfont icon-user el-input__icon"></i>
+        </el-input>
       </el-form-item>
       <el-form-item prop="password">
-        <el-input type="password" v-model="user.password">
-          <i slot="prefix" class="el-input__icon el-icon-search"></i>
+        <el-input v-bind:type="isShowPassword?'text':'password'" v-model="user.password">
+          <i slot="prefix" class="iconfont icon-password el-input__icon"></i>
+          <i slot="suffix" @click="showPassword" :class="isShowPassword?'iconfont el-input__icon icon-eye':'iconfont el-input__icon icon-eye-close'"></i>
         </el-input>
       </el-form-item>
       <el-form-item>
@@ -17,7 +20,6 @@
       </el-form-item>
       <!-- <el-button type="text" @click="goRegister">注册</el-button> -->
       <!-- <div> -->
-
       <!-- </div> -->
     </el-form>
   </div>
@@ -32,6 +34,7 @@ export default {
         name: "",
         password: ""
       },
+      isShowPassword: false,
       rules: {
         name: [
           { required: true, message: "请输入用户名", trigger: "blur" },
@@ -73,12 +76,18 @@ export default {
     };
   },
   methods: {
+    showPassword: function() {
+      var vm = this;
+      vm.isShowPassword = !vm.isShowPassword;
+    },
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
+        // element 验证form
         if (valid) {
           alert("submit!");
         } else {
           console.log("error submit!!");
+          window.location.href = "/#/Index";
           return false;
         }
       });
@@ -87,7 +96,8 @@ export default {
       this.$refs[formName].resetFields();
     },
     goRegister: function() {
-      this.$router.push({ path: "./register" });
+      this.$router.push({ path: "./index" });
+      // this.$router.push({ path: "./register" });
     }
   }
 };
