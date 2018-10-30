@@ -1,23 +1,19 @@
 <template>
     <div>
         <el-container>
-            <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-               <cmenu></cmenu>
-            </el-aside>
-
             <el-container>
                 <el-header style="text-align: right; font-size: 12px">
                     <el-dropdown>
-                        <i class="el-icon-setting" style="margin-right: 15px"></i>
+                        <span>Admin</span>
+                         <el-button type="warning" circle>A</el-button>
+                        <!-- <i class="el-icon-setting" style="margin-right: 15px"></i> -->
                         <el-dropdown-menu slot="dropdown">
                             <el-dropdown-item>查看</el-dropdown-item>
                             <el-dropdown-item>新增</el-dropdown-item>
                             <el-dropdown-item>删除</el-dropdown-item>
                         </el-dropdown-menu>
                     </el-dropdown>
-                    <span>王小虎</span>
                 </el-header>
-
                 <el-main>
                     <el-table :data="tableData">
                         <el-table-column prop="date" label="日期" width="140">
@@ -30,49 +26,17 @@
                 </el-main>
             </el-container>
         </el-container>
-
-        <!-- <cmenu></cmenu>
         <div class="rightContent">
             <cheader></cheader>
-            <div class="middleContent">
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-                <p>Welcome</p>
-            </div>
         </div>
-        <cbacktotop></cbacktotop> -->
+        <cbacktotop></cbacktotop>
     </div>
 </template>
 
 <script>
 import cbacktotop from "@/components/backtotop";
 import cheader from "@/components/header";
-import cmenu from "@/components/menu";
+// import cmenu from "@/components/menu";
 export default {
   name: "index",
   data() {
@@ -87,8 +51,8 @@ export default {
   },
   components: {
     cbacktotop: cbacktotop,
-    cheader: cheader,
-    cmenu: cmenu
+    cheader: cheader
+    // cmenu: cmenu
   }
 };
 </script>
@@ -99,8 +63,8 @@ div.rightContent {
   padding-top: 10px;
 }
 .el-header {
-  background-color: #b3c0d1;
-  color: #333;
+  background-color: #202329;
+  color: #fff;
   line-height: 60px;
 }
 
