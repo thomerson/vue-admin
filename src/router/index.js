@@ -3,6 +3,8 @@
 import Login from '@/views/login'
 import Register from '@/views/register'
 import Dashboard from '@/views/dashboard'
+import Candidate from '@/views/candidate'
+import Search from '@/views/Search'
 
 // Vue.use(Router)
 const routes = [
@@ -24,6 +26,16 @@ const routes = [
     path: '/Index',
     name: 'Dashboard',
     component: Dashboard
+  },
+  {
+    path: '/Candidate',
+    name: 'Candidate',
+    component: Candidate
+  },
+  {
+    path: '/Search',
+    name: 'Search',
+    component: Search
   }
 ]
 

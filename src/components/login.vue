@@ -8,7 +8,7 @@
       </el-form-item>
       <el-form-item prop="password">
         <el-input v-bind:type="isShowPassword?'text':'password'" v-model="user.password">
-          <i slot="prefix" class="iconfont icon-password el-input__icon"></i>
+          <i slot="prefix" class="iconfont icon-lock el-input__icon"></i>
           <i slot="suffix" @click="showPassword" :class="isShowPassword?'iconfont el-input__icon icon-eye':'iconfont el-input__icon icon-eye-close'"></i>
         </el-input>
       </el-form-item>
@@ -82,7 +82,7 @@ export default {
     },
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
-        // element 验证form
+        // element 验证formcn
         if (valid) {
           alert("submit!");
         } else {

@@ -64,8 +64,8 @@
                 <p>Welcome</p>
                 <p>Welcome</p>
             </div>
-        </div>
-        <cbacktotop></cbacktotop> -->
+        </div> -->
+        <cbacktotop></cbacktotop>
     </div>
 </template>
 
